@@ -1,41 +1,17 @@
-function calcularDistancia(){
-    
-    const disTotal = 1492.56
-    const disPercorrida = 900
-    const disRestante = disTotal - disPercorrida;
+function calcularHora() {
+    const minutos = Number(prompt("Quantos minutos? "))
+    const horatot = minutos / 60
+    // const total = jantar + garcom
+    const hora = ~~(minutos / 60);
+    const min = minutos % 60;
+    //  alert("Total de horas: "+horatot);
+    if (hora != 0 && min != 0)
+        alert("\n\n" + hora + " Horas e " + min + " minutos de viagem");
+    else if (hora != 0)
+        alert("\n\n" + hora + " Horas de viagem");
+    else if (min != 0)
+        alert("\n\n" + min + " minutos de viagem");
 
-    const gps={
-        disTotal: 1492.56,
-        disPercorrida: 900,
-        disRestante: disTotal - disPercorrida
+    // Uso crase para fazer interpolação. Segue exempo abaixo
 
-    }
-
-    document.getElementById("disTotal").innerHTML = disTotal;
-    document.getElementById("disPercorrida").innerHTML = disPercorrida;
-    document.getElementById("disRestante").innerHTML = disRestante;
-
-    document.getElementById("disTotal").innerHTML = gps.disTotal;
-    document.getElementById("disPercorrida").innerHTML = gps.disPercorrida;
-    document.getElementById("disRestante").innerHTML = gps.disRestante;
-
-    /*
-    <!DOCTYPE html>
-<html>
-<head>
-  <title>Exemplo getElementById</title>
-  <script>
-  function mudarCor(novaCor) {
-    var elemento = document.getElementById("para1");
-    elemento.style.color = novaCor;
-  }
-  </script>
-</head>
-<body>
-  <p id="para1">Algum texto de exemplo</p>
-  <button onclick="mudarCor('blue');">Azul</button>
-  <button onclick="mudarCor('red');">Vermelho</button>
-</body>
-</html>
-    */
-    }
+}
